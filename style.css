@@ -1,0 +1,142 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root{
+    --backgournd-color : #23368b;
+    --blue-color : #577BC1;
+    --white-color : #fff;
+    --black-color : #000;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Roboto Condensed", sans-serif;
+    border: none;
+    outline: none;
+}
+
+.main{
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--backgournd-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.weather-card{
+    width: 24%;
+    height: 75%;
+    border-radius: 15px;
+    background-color: var(--white-color);
+    padding: 20px 20px;
+}
+
+.search-form{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 22px;
+    height: 10%;
+}
+
+
+.search-form input{
+    border: none;
+    outline: none;
+    font-size: 18px;
+}
+
+.search-form button{
+    cursor: pointer;
+}
+
+
+.search-form button i {
+    background-color: var(--white-color);
+    font-size: 20px;
+}
+
+.weather-details{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+        height: 90%;
+    
+}
+
+.none{
+    display: none;
+}
+
+.not-found{
+    height: 90%;
+    background-image: url("./not_found.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+}
+
+.weather-details .main-details{
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.main-details .icon-holder {
+    padding: 20px 0px 0px 0;
+}
+
+.main-details .icon-holder img{
+    height: 160px;
+}
+
+.main-details .temp-holder{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.main-details .temp-holder .temp{
+    font-size: 40px;
+    font-weight: bold;
+}
+
+.weather-details .other-details{
+    padding: 10px 20px;
+    height: 20%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.other-details .humudity{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.other-details .humudity i{
+    font-size: 22px;
+}
+
+.other-details .humudity .humudity-details{
+    padding-left: 10px;
+}
+
+.other-details .wind{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.other-details .wind i{
+    font-size: 22px;
+}
+
+.other-details .wind .wind-details{
+    padding-left: 10px;
+}
+
+

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple weather App</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.13.1/font/bootstrap-icons.min.css"
+        integrity="sha512-t7Few9xlddEmgd3oKZQahkNI4dS6l80+eGEzFQiqtyVYdvcSG2D3Iub77R20BdotfRPA9caaRkg1tyaJiPmO0g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+
+    <div class="main">
+        <div class="weather-card">
+            <form class="search-form">
+                <div class="search-group">
+                    <i class="bi bi-geo-alt"></i>
+                    <input type="text" placeholder="Enter the city name" id="CityName">
+                </div>
+                <button type="submit" id="search">
+                    <i class="bi bi-search"></i>
+                </button>
+            </form>
+            <div class="weather-details none">
+                <div class="main-details">
+                    <div class="icon-holder">
+                        <img src="https://openweathermap.org/img/wn/10d@2x.png" alt="" id="img">
+                    </div>
+                    <div class="temp-holder">
+                        <div class="temp">
+                            22
+                        </div>
+                        <div class="state">
+                            Overcast Clouds
+                        </div>
+                    </div>
+                </div>
+                <div class="other-details">
+                    <div class="humudity">
+                        <i class="bi bi-water"></i>
+                        <div class="humudity-details">
+                            <div class="humudity-core">91%</div>
+                            <div class="humudity-description">Humidity</div>
+                        </div>
+                    </div>
+                    <div class="wind">
+                        <div class="icon-holder">
+                            <i class="bi bi-wind"></i>
+                        </div>
+                        <div class="wind-details">
+                            <div class="wind-core">1m/s</div>
+                            <div class="wind-description">Wind Speed</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="not-found">
+            </div>
+        </div>
+    </div>
+    
+    <script src="config.js"></script>
+    <script src="Script.js"></script>
+</body>
+
+</html>
