@@ -1,6 +1,10 @@
 # Simple Weather App 🌤️
 
-A small vanilla JavaScript weather app that fetches data from the OpenWeatherMap API based on a city name.
+A small vanilla JavaScript weather app that fetches data from the OpenWeatherMap API based on a city name with modern and lean Ui.
+
+## Preview
+
+![Weather App UI](Assets/ui-preview.png)
 
 I'm using this project to learn:
 - How to call APIs from the browser

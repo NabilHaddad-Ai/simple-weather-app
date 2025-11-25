@@ -19,18 +19,63 @@
 .main{
     width: 100vw;
     height: 100vh;
-    background-color: var(--backgournd-color);
+    background-image: url("./Assets/background2.jpg");
+    filter: grayscale(50%);
+    background-size: cover; /* Ensures the image covers the whole area */
+    background-position: center; /* Centers the image */
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
 .weather-card{
-    width: 24%;
-    height: 75%;
+    width: 280px;
+    height: 420px;
     border-radius: 15px;
-    background-color: var(--white-color);
     padding: 20px 20px;
+}
+.glass-card {
+  background: rgba(255, 255, 255, 0.29);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(28px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 
+    0 8px 32px rgba(0, 0, 0, 0.1),
+    inset 0 1px 0 rgba(255, 255, 255, 0.5),
+    inset 0 -1px 0 rgba(255, 255, 255, 0.1),
+    inset 0 0 4px 2px rgba(255, 255, 255, 0.2);
+  position: relative;
+  overflow: hidden;
+}
+
+.glass-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.8),
+    transparent
+  );
+}
+
+.glass-card::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 1px;
+  height: 100%;
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.8),
+    transparent,
+    rgba(255, 255, 255, 0.3)
+  );
 }
 
 .search-form{
@@ -46,15 +91,33 @@
     border: none;
     outline: none;
     font-size: 18px;
+    background-color: transparent;
+}
+
+.search-form input:focus,
+.search-form input:active, 
+.search-form input:hover {
+    background-color: transparent!important;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+
+    -webkit-box-shadow: 0 0 0px 1000px transparent inset !important;
+    -webkit-text-fill-color: #333; 
+    transition: background-color 5000s ease-in-out 0s;
 }
 
 .search-form button{
     cursor: pointer;
+    background-color: transparent;
 }
 
 
 .search-form button i {
-    background-color: var(--white-color);
+    background-color: transparent;
     font-size: 20px;
 }
 
@@ -72,7 +135,7 @@
 
 .not-found{
     height: 90%;
-    background-image: url("./not_found.jpg");
+    background-image: url("./Assets/No_data.png");
     background-repeat: no-repeat;
     background-position: center;
     background-size: contain;
